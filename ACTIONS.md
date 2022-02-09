@@ -5,7 +5,7 @@ All the actions and how to use them are described below:
 
 how to use this section:
 - Description: describes the action functionality
-- Action key: the action identifier, use it in `action` field
+- Action key: the action identifier, use it in your step `action` field
 - How to use: describes the params and args available for the action
 
 All actions available:
@@ -16,7 +16,6 @@ All actions available:
 - [Custom](#custom-action)
 
 ### GotoUrl
-
 - Description: Redirect your browser page to the provided URL.
 - Action key: "goto-url"
 - How to use: set the destinantion URL on `value` field
@@ -32,7 +31,6 @@ All actions available:
 ```
 
 ### Delay
-
 - Description: Set a delay in your pipeline
 - Action key: "delay"
 - How to use: set the delay (miliseconds) in `value` field
@@ -48,7 +46,6 @@ All actions available:
 ```
 
 ### GetPageScreenshot
-
 - Description: Get a screenshot of browser page and save file
 - Action key: "get-page-screenshot"
 - How to use: set the path to file be stored in `value` field, set the image type in `args.imageType` field, set the fullPage option in `args.fullPage`
@@ -67,7 +64,6 @@ All actions available:
 ```
 
 ### Custom Action
-
 There is a special action, called "Custom". This action allows you to inject your own code, you can use your own function inside "Puppeteer Actions" pipeline, allowing any behaviour implementation.
 
 - Description: Execute any custom function provided

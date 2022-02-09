@@ -1,5 +1,5 @@
 # Puppeteer Actions
-Puppeteer Actions provides you a interface for run puppeteer executions, through a payload, making yeasier the way to develop with puppeteer, and reducing duplicated code in your application.
+Puppeteer Actions provides you a interface for run puppeteer executions, through a payload, making easier the way to develop with puppeteer, and reducing duplicated code in your application.
 
 ## Installation
 To use Puppeteer Actions in your project, run:
@@ -22,7 +22,7 @@ Use the function `executeSteps` provided by the lib (lib/index), passing a paylo
   - action: action key - key to define wich action will be executed. Consult the [Actions](#actions) section (string)
   - value: main param for action - example: url, delay time, etc. Consult the Action to see available params (string)
   - criticalStep: defines if the step is critical, if true, when an exception is throwed, the pipeline will be stopped (boolean)
-  - agr: other params for action (any)
+  - args: other params for action (any)
 
 ```ts
 const { executeSteps } = require("./dist/lib/index");
