@@ -27,29 +27,13 @@ All actions available:
 
 ```js
 {
-    name: "I'm Feeling Lucky",
-    action: "click",
-    criticalStep: false,
-    args: {
-      selector: "#gb > div > div:nth-child(1) > div > div:nth-child(1) > a",
-      button: "middle",
-    },
-}
-```
-
-### GotoUrl
-
-- Description: Redirect your browser page to the provided URL.
-- Action key: "goto-url"
-- How to use: set the destinantion URL on `value` field
-
-```js
-{
-    name: "opening github page",
-    action: "goto-url",
-    value: "https://www.github.com",
-    criticalStep: false,
-    args: {},
+  name: "I'm Feeling Lucky",
+  action: "click",
+  criticalStep: false,
+  args: {
+    selector: "#gb > div > div:nth-child(1) > div > div:nth-child(1) > a",
+    button: "middle",
+  },
 }
 ```
 
@@ -57,15 +41,16 @@ All actions available:
 
 - Description: Set a delay in your pipeline
 - Action key: "delay"
-- How to use: set the delay (miliseconds) in `value` field
+- How to use: set the delay (miliseconds) in `args.delay` field
 
 ```js
 {
   name: "waiting for any",
   action: "delay",
-  value: "4000",
   criticalStep: false,
-  args: {},
+  args: {
+    delay: 4000,
+  },
 }
 ```
 
@@ -73,18 +58,35 @@ All actions available:
 
 - Description: Get a screenshot of browser page and save file
 - Action key: "get-page-screenshot"
-- How to use: set the path to file be stored in `value` field, set the image type in `args.imageType` field, set the fullPage option in `args.fullPage`
+- How to use: set the path to file be stored in `args.path` field, set the image type in `args.imageType` field, set the fullPage option in `args.fullPage`
 
 ```js
 {
   name: "get a screenshot",
   action: "get-page-screenshot",
-  value: "./my-image.jpg",
   criticalStep: false,
   args: {
-      type: "jpg",
-      fullPage: true
+    path: "./my-image.jpg",
+    type: "jpg",
+    fullPage: true
   }
+}
+```
+
+### GotoUrl
+
+- Description: Redirect your browser page to the provided URL.
+- Action key: "goto-url"
+- How to use: set the destinantion URL on `args.url` field
+
+```js
+{
+  name: "opening github page",
+  action: "goto-url",
+  criticalStep: false,
+  args: {
+    url: "https://www.github.com"
+  },
 }
 ```
 

@@ -19,7 +19,6 @@ test("executeStepAction should execute action function", async () => {
   let step: ExecutionStep = {
     name: "custom",
     action: "action-test",
-    value: "any",
     criticalStep: false,
     args: {},
   };
@@ -33,7 +32,6 @@ test("executeStepAction should throw Error if action not found", async () => {
   let step: ExecutionStep = {
     name: "test",
     action: "any-action-that-doesnt-exists",
-    value: "any",
     criticalStep: false,
     args: {},
   };
@@ -89,7 +87,6 @@ test("handleStep should throw StepExecutionException", async () => {
   let step: ExecutionStep = {
     name: "test123",
     action: "any-action-that-doesnt-exists",
-    value: "any",
     criticalStep: false,
     args: {},
   };
