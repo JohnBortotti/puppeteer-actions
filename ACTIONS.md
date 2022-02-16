@@ -16,6 +16,7 @@ All actions available:
 - [Delay](#delay)
 - [GetPageScreenshot](#getpagescreenshot)
 - [GotoUrl](#gotourl)
+- [Type](#type)
 
 - [Custom Action](#custom-action)
 
@@ -89,6 +90,25 @@ All actions available:
   },
 }
 ```
+
+### Type
+
+- Description: Insert keyboard input.
+- Action key: "type"
+- How to use: set the target selector on `args.selector` and input string on `args.input`
+
+```js
+{
+  name: "type a string",
+  action: "type",
+  criticalStep: false,
+  args: {
+    selector: '.class',
+    input: 'anything here',
+  },
+}
+```
+
 
 ### Custom Action
 
