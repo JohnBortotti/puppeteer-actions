@@ -1,21 +1,44 @@
 # Puppeteer Actions
 
 ## Actions
+
 All the actions and how to use them are described below:
 
 how to use this section:
+
 - Description: describes the action functionality
 - Action key: the action identifier, use it in your step `action` field
 - How to use: describes the params and args available for the action
 
 All actions available:
 
-- [GotoUrl](#gotourl)
+- [Click](#click)
 - [Delay](#delay)
 - [GetPageScreenshot](#getpagescreenshot)
-- [Custom](#custom-action)
+- [GotoUrl](#gotourl)
+
+- [Custom Action](#custom-action)
+
+### Click
+
+- Description: Click on selector.
+- Action key: "click"
+- How to use: set the target selector on `args.selector` and mouse button on `args.button`
+
+```js
+{
+    name: "I'm Feeling Lucky",
+    action: "click",
+    criticalStep: false,
+    args: {
+      selector: "#gb > div > div:nth-child(1) > div > div:nth-child(1) > a",
+      button: "middle",
+    },
+}
+```
 
 ### GotoUrl
+
 - Description: Redirect your browser page to the provided URL.
 - Action key: "goto-url"
 - How to use: set the destinantion URL on `value` field
@@ -31,6 +54,7 @@ All actions available:
 ```
 
 ### Delay
+
 - Description: Set a delay in your pipeline
 - Action key: "delay"
 - How to use: set the delay (miliseconds) in `value` field
@@ -46,6 +70,7 @@ All actions available:
 ```
 
 ### GetPageScreenshot
+
 - Description: Get a screenshot of browser page and save file
 - Action key: "get-page-screenshot"
 - How to use: set the path to file be stored in `value` field, set the image type in `args.imageType` field, set the fullPage option in `args.fullPage`
@@ -64,6 +89,7 @@ All actions available:
 ```
 
 ### Custom Action
+
 There is a special action, called "Custom". This action allows you to inject your own code, you can use your own function inside "Puppeteer Actions" pipeline, allowing any behaviour implementation.
 
 - Description: Execute any custom function provided
