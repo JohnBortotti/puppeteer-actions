@@ -18,6 +18,7 @@ All actions available:
 - [GetPageScreenshot](#getpagescreenshot)
 - [GotoUrl](#gotourl)
 - [Type](#type)
+- [WaitForSelector](#waitforselector)
 
 - [Custom Action](#custom-action)
 
@@ -124,6 +125,23 @@ All actions available:
   args: {
     selector: '.class',
     input: 'anything here',
+  },
+}
+```
+
+### WaitForSelector
+
+- Description: Wait for the target selector to appear in page.
+- Action key: "wait-for-selector"
+- How to use: set the target selector on `args.selector`
+
+```js
+{
+  name: "waiting for a selector",
+  action: "wait-for-selector",
+  criticalStep: false,
+  args: {
+    selector: '#any-selector',
   },
 }
 ```
