@@ -7,6 +7,7 @@
     "test": "jest",
     "test unit": "jest tests/unit",
     "test actions": "jest tests/actions",
+    "coverage": "jest --coverage",
     "compile": "tsc --project tsconfig.json"
   },
   "author": "",
