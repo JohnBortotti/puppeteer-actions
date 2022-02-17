@@ -14,6 +14,7 @@ All actions available:
 
 - [Click](#click)
 - [Delay](#delay)
+- [GetInnerText](#getinnertext)
 - [GetPageScreenshot](#getpagescreenshot)
 - [GotoUrl](#gotourl)
 - [Type](#type)
@@ -52,6 +53,24 @@ All actions available:
   args: {
     delay: 4000,
   },
+}
+```
+
+### GetInnerText
+
+- Description: Evaluates the element and get innerText, saving it on the property defined.
+- Action key: "get-inner-text"
+- How to use: set the target selector in `args.selector`, and the property in `args.property`, on the next steps this property will be populated with the evaluated text
+
+```js
+{
+  name: "Get inner text from card",
+  action: "get-inner-text",
+  criticalStep: false,
+  args: {
+    selector: ".any-selector-card-y",
+    property: "cardText" // the property page.cardText will receive the returned text
+  }
 }
 ```
 
@@ -108,7 +127,6 @@ All actions available:
   },
 }
 ```
-
 
 ### Custom Action
 
