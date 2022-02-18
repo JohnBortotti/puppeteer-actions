@@ -17,6 +17,9 @@ All actions available:
 - [GetInnerText](#getinnertext)
 - [GetPageScreenshot](#getpagescreenshot)
 - [GotoUrl](#gotourl)
+- [PageBack](#pageback)
+- [PageForward](#pageforward)
+- [PageReload](#pagereload)
 - [Type](#type)
 - [WaitForSelector](#waitforselector)
 
@@ -108,6 +111,51 @@ All actions available:
   args: {
     url: "https://www.github.com"
   },
+}
+```
+
+### PageBack
+
+- Description: Navigate to the previous page.
+- Action key: "page-back"
+- How to use: this action require no args
+
+```js
+{
+  name: "returning page",
+  action: "page-back",
+  criticalStep: false,
+  args: {},
+}
+```
+
+### PageForward
+
+- Description: Navigate to the next page.
+- Action key: "page-forward"
+- How to use: this action require no args
+
+```js
+{
+  name: "go to next page",
+  action: "page-forward",
+  criticalStep: false,
+  args: {},
+}
+```
+
+### PageReload
+
+- Description: Reload page.
+- Action key: "page-reload"
+- How to use: this action require no args
+
+```js
+{
+  name: "reloading page",
+  action: "page-reload",
+  criticalStep: false,
+  args: {},
 }
 ```
 
