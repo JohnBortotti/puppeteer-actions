@@ -1,8 +1,6 @@
-import { ExecutionStep } from "../../../types/executionStep";
-
 module.exports = {
   key: "page-back",
-  function: async function (page: any, step: ExecutionStep) {
+  function: async function(page: any) {
     await page.goBack();
   },
 };
