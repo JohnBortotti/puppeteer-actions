@@ -14,6 +14,7 @@ All actions available:
 
 - [Click](#click)
 - [Delay](#delay)
+- [GetElementInfos](#getelementinfos)
 - [GetInnerText](#getinnertext)
 - [GetPageScreenshot](#getpagescreenshot)
 - [GotoUrl](#gotourl)
@@ -51,7 +52,7 @@ All actions available:
 
 ```js
 {
-  name: "waiting for any",
+  name: "waiting for anything",
   action: "delay",
   criticalStep: false,
   args: {
@@ -60,9 +61,37 @@ All actions available:
 }
 ```
 
+### GetElementInfos
+
+- Description: Evaluates the element and return an object with infos, mapped from the selectors array, saving it on the defined property.
+- Action key: "get-element-infos"
+- How to use: set the element selector in `args.elementSelector`, the property key in `args.property`, and the infos inside the `args.infos` array, as described below
+
+```js
+{
+  name: "Get element infos",
+  action: "get-element-infos",
+  criticalStep: false,
+  args: {
+    elementSelector: ".card-selector",
+    property: "cardInfos",
+    infos: [
+      {
+        name: "card-title",
+        selector: ".card-title > p",
+      },
+      {
+        name: "card-description",
+        selector: ".card-description > div",
+      },
+    ],
+  },
+},
+```
+
 ### GetInnerText
 
-- Description: Evaluates the element and get innerText, saving it on the property defined.
+- Description: Evaluates the element and get innerText, saving it on the defined property.
 - Action key: "get-inner-text"
 - How to use: set the target selector in `args.selector`, and the property in `args.property`, on the next steps this property will be populated with the evaluated text
 
@@ -73,7 +102,7 @@ All actions available:
   criticalStep: false,
   args: {
     selector: ".any-selector-card-y",
-    property: "cardText" // the property page.cardText will receive the returned text
+    property: "cardText"
   }
 }
 ```
@@ -210,6 +239,7 @@ There is a special action, called "Custom". This action allows you to inject you
   args: {
     customFunction: async function (page) {
       //any function here//
+      //e.g. console.log('test')//
       await page.goto("https://www.github.com");
     },
   },

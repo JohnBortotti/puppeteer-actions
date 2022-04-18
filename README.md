@@ -89,4 +89,4 @@ To see all actions available go to: [Actions Doc](./ACTIONS.md)
 
 ## Contributing
 
-[ ] Add this section
+- [ ] Add this section
