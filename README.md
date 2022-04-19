@@ -85,7 +85,7 @@ The `executeSteps` provides 2 callbacks:
 
 Actions are the core of the pipeline, modular and configurable prebuilt functions that will save your time coding puppeteer functions
 <br>
-To see all actions available go to: [Actions Doc](./ACTIONS.md)
+All available actions: [Actions Doc](./ACTIONS.md)
 
 ## Contributing
 
