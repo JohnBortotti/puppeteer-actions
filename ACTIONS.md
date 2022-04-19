@@ -63,7 +63,7 @@ All actions available:
 
 ### GetElementInfos
 
-- Description: Evaluates the element and return an object with infos, mapped from the selectors array, saving it on the defined property.
+- Description: Evaluates the element and return an object with infos (innerText), mapped from the selectors array, saving it on the defined property.
 - Action key: "get-element-infos"
 - How to use: set the element selector in `args.elementSelector`, the property key in `args.property`, and the infos inside the `args.infos` array, as described below
 
